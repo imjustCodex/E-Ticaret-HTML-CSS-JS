@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  color: var(--gray);
+}
+
+a:hover {
+  color: var(--purple);
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --black: #1c2a39;
+  --gray: #5c6a79;
+  --purple: #4c3db2;
+  --transition: all 250ms ease-in-out;
+}
+
+.navbar {
+  height: 120px;
+  width: 80%;
+  margin-left: 10%;
+}
+.title {
+  font-weight: bold;
+}
+
+.menu,
+.menu__icons {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+  color: var(--gray);
+  cursor: pointer;
+}
+
+.menu .active a {
+  color: var(--black);
+  font-weight: bold;
+}
+.menu li:hover {
+  color: var(--black);
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.menu li,
+.menu__icons li {
+  margin: 0 10px;
+}
+
+.menu__icons li {
+  color: var(--black);
+}
+
+.about {
+  width: 100%;
+  height: 1000px;
+  padding: 78px 0px;
+  background-color: #1c2a39;
+}
+.about img {
+  height: auto;
+  width: 45%;
+}
+.about .about-text {
+  width: 50%;
+}
+.main {
+  width: 100%;
+  max-width: 95%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.about-text h1 {
+  font-size: 80px;
+  color: #fff;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+.about-text h4 {
+  font-size: 25px;
+  color: #fff;
+  text-transform: capitalize;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+}
+span {
+  color: #f2c94c;
+}
+.about-text p {
+  color: #fcfcfc;
+  letter-spacing: 1px;
+  line-height: 28px;
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+button {
+  background-color: var(--purple);
+  color: white;
+  text-decoration: none;
+  border: 2px solid transparent;
+  padding: 10px 30px;
+  border-radius: 30px;
+  transition: 0.4s;
+  font-weight: bold;
+}
+button:hover {
+  background-color: transparent;
+  color: #f2c94c;
+  border: 2px solid #f2c94c;
+}
+.about-text h1 {
+  font-size: 80px;
+  color: #fff;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+.footer {
+  width: 100%;
+  height: 300px;
+  background-color: #1c2a39;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: #fff;
+  font-size: 82px;
+  font-weight: bold;
+  border-top: 10px solid #fff;
+}

@@ -1,0 +1,117 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Open+Sans&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+a {
+  text-decoration: none;
+  color: inherit;
+  font-weight: bold;
+  color: var(--gray);
+}
+
+a:hover {
+  color: var(--purple);
+}
+
+* {
+  font-family: "Montserrat", sans-serif;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --black: #1c2a39;
+  --gray: #5c6a79;
+  --purple: #4c3db2;
+  --transition: all 250ms ease-in-out;
+}
+
+.navbar {
+  height: 120px;
+  width: 80%;
+  margin-left: 10%;
+}
+.title {
+  font-weight: bold;
+}
+
+.menu,
+.menu__icons {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  font-size: 20px;
+  color: var(--gray);
+  cursor: pointer;
+}
+
+.menu .active a {
+  color: var(--black);
+  font-weight: bold;
+}
+.menu li:hover {
+  color: var(--black);
+  font-weight: bold;
+  font-size: 24px;
+}
+
+.menu li,
+.menu__icons li {
+  margin: 0 10px;
+}
+
+.menu__icons li {
+  color: var(--black);
+}
+
+section.contact {
+padding: 40px 5%;
+}
+.contact {
+  background-color: #1c2a39;
+  height: 100%;
+  width: 100%;
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  grid-gap: 6rem;
+}
+.contact-img img {
+  max-width: 100%;
+  width: 1000px;
+  height: auto;
+  border-radius: 10px;
+  margin-right: 20px;
+}
+.contact-form h1 {
+  font-size: 80px;
+  color: #fff;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
+span {
+  color: var(--purple);
+}
+.contact-form p {
+  font-size: 20px;
+  color: #c6c9d8bf;
+  margin-bottom: 3.5rem;
+  letter-spacing: 1px;
+  line-height: 26px;
+  font-size: 1.1rem;
+}
+.contact-form form {
+  position: relative;
+}
+.contact-form form input,
+form textarea{
+width: 100%;
+padding: 17px;
+border: none;
+outline: none;
+background: #191919;
+color: #fff;
+font-size: 1.1rem,;
+margin-bottom: 0.7rem;
+border-radius: 10px;
+
+}

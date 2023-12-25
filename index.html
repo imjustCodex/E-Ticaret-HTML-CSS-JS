@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MangalSEPETI</title>
+    <link rel="stylesheet" href="./assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./assets/toastr/toastr.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="./assets/images/mangal/favicon.ico"
+    />
+  </head>
+  <body onload="startTime()">
+    <nav class="navbar">
+      <h2 class="title">MangalSEPETI</h2>
+      <ul class="menu">
+        <li class="active">
+          <a href="./index.html">MANGALS</a>
+        </li>
+        <li>
+          <a href="./about.html">HAKKIMIZDA</a>
+        </li>
+        <li>
+          <a href="./contact.html">BİZE ULAŞ</a>
+        </li>
+        <li>
+          <a href="./team.html">EKIBIMIZ</a>
+      </li>
+      </ul>
+      <ul class="menu__icons">
+        <li><i class="bi bi-person"></i></li>
+        <li><i class="bi bi-search"></i></li>
+        <li class="cart__icon" onclick="toggleModal()">
+          <i class="bi bi-bag"></i>
+          <span class="cart__count"></span>
+        </li>
+      </ul>
+    </nav>
+    <div id="time"></div>
+    <section class="slider">
+      <div
+        id="carouselmangalSlider"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="./assets/images/fiyatlari-sabitledik-140.jpg"
+              class="d-block w-100"
+              alt="Online Schol"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./assets/images/enders-aurora-dumansiz-mangal-144.jpg"
+              class="d-block w-100"
+              alt="Dünya Çocuk Kitap Günü"
+            />
+          </div>
+          <div class="carousel-item">
+            <img
+              src="./assets/images/cozze-147.jpg"
+              class="d-block w-100"
+              alt="Sevgililer Günü"
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselmangalSlider"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselmangalSlider"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+    <section class="store my-5">
+      <div class="filter__background"></div>
+      <ul class="filter">
+      </ul>
+      <div class="row mangal__list"></div>
+    </section>
+    <div class="cart__modal">
+      <div class="cart__items">
+        <i class="bi bi-x" onclick="toggleModal()"></i>
+        <h2 class="cart__title">Sepetiniz</h2>
+        <ul class="cart__list">
+          <li class="cart__item">Sepetiniz boş.</li>
+        </ul>
+        <div class="cart__total">
+          <span class="fw-bold mb-3 fs-4 total__price"></span>
+          <button class="btn__purple" onclick="satinal()">Satın Al</button>
+        </div>
+      </div>
+    </div>
+    <script
+      type="text/javascript"
+      src="assets/bootstrap/js/bootstrap.min.js"
+    ></script>
+    <script src="./assets/jquery/jquery.min.js"></script>
+    <script src="./assets/toastr/toastr.min.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+    <script>
+      function startTime() {
+        const today = new Date();
+        let h = today.getHours();
+        let m = today.getMinutes();
+        let s = today.getSeconds();
+        m = checkTime(m);
+        s = checkTime(s);
+        document.getElementById('time').innerHTML =  h + ":" + m + ":" + s;
+        setTimeout(startTime, 1000);
+      }
+      
+      function checkTime(i) {
+        if (i < 10) {i = "0" + i};  // add zero in front of numbers < 10
+        return i;
+      }
+      </script>
+  </body>
+</html>
